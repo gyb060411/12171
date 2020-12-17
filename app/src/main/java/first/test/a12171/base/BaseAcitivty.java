@@ -1,6 +1,7 @@
 package first.test.a12171.base;
 
 import android.os.Bundle;
+import android.util.Log;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
@@ -16,6 +17,7 @@ abstract class BaseAcitivty<P extends BasePresenter> extends AppCompatActivity i
         if(persenter==null){
             persenter=getPersenter();
             persenter.attachView(this);
+            Log.e("TAG", "attachView: 信息"+this.toString() );
         }
         initView();
         initData();

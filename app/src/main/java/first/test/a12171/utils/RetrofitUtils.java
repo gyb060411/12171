@@ -22,7 +22,8 @@ class RetrofitUtils implements InetWorkInterface{
     private ApiService apiService;
     private RetrofitUtils(){
         OkHttpClient okHttpClient = new OkHttpClient().newBuilder().build();
-        Retrofit retrofit = new Retrofit.Builder().baseUrl(URLConstart.School)
+        Retrofit retrofit = new Retrofit.Builder().
+                baseUrl(URLConstart.BASEURL)
                 .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
                 .build();
         apiService=retrofit.create(ApiService.class);
